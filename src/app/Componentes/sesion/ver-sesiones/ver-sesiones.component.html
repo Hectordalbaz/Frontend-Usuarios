@@ -1,1 +1,23 @@
-<p>ver-sesiones works!</p>
+<app-menu></app-menu>
+<div><h2>Últimos Inicios de sesión</h2></div>
+<div *ngFor="let error of errores">
+    <div *ngIf="error!=null">
+        {{error}}
+    </div>
+</div>
+
+<table class="table table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Nombre de usuario</th>
+        <th scope="col">Fecha y Hora</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let sesion of sesiones">
+        <td>{{ sesion.usuario.nombre}}</td>
+        <td>{{ sesion.fec_hor_ini_ses }}</td>
+      </tr>
+    </tbody>
+  </table>
+  
