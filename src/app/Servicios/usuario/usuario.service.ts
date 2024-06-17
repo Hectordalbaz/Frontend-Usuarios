@@ -8,5 +8,8 @@ export class UsuarioService {
 private url="http://localhost:8080/usuarios"
   constructor(private httpCliente:HttpClient) { }
 
-  //Metodo para obtener los ultimos inicios de sesion
+  //Metodo para registrar el usuario
+  public registrarUsuario(usuario:any){
+    return this.httpCliente.post(`${this.url}`,usuario);
+  }
 }

@@ -13,6 +13,6 @@ export class SesionService {
 
   //Metodo para obtener los ultimos inicios de sesion
   obtenerSesiones():Observable<Sesion[]>{
-    return this.httpCliente.get<Sesion[]>(`${this.url}`)
+    return this.httpCliente.get<Sesion[]>(`${this.url}`);
   }
 }
